@@ -1,0 +1,17 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./cmd-etl/db/query/"
+    schema: "./cmd-etl/db/migration/"
+    gen:
+      go:
+        package: "db"
+        out: "cmd-etl/db/sqlc"
+        sql_package: "pgx/v5"
+        overrides:
+          [
+            {
+              "go_type": "github.com/shopspring/decimal.Decimal",
+              "db_type": "pg_catalog.numeric",
+            },
+          ]
