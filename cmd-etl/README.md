@@ -107,5 +107,5 @@ For example, we drop a file `../data/raw/snapshot_20230603.csv` into `../data/ra
 
 ## Usage Demo
 
-![usage.gif](./resources/usage.gif)
+![usage.gif](../resources/usage.gif)
 
